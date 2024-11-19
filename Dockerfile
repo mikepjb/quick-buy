@@ -14,8 +14,7 @@ FROM quick-base AS quick-build
 
 COPY . .
 WORKDIR /app
-# doesn't seem to build the jar.. I can't see it in the final image anyway.
-RUN ./gradlew app:jar
+RUN ./gradlew build
 
 FROM quick-base AS quick-pos
 

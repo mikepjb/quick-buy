@@ -7,6 +7,8 @@
  */
 
 plugins {
+    id("org.springframework.boot") version "3.3.5"
+    id("io.spring.dependency-management") version "1.1.6"
     // Apply the application plugin to add support for building a CLI application in Java.
     application
 }
@@ -19,6 +21,14 @@ repositories {
 dependencies {
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    implementation("org.springframework.boot:spring-boot-starter")
+    // starter-web is required to get web related annotations like @RestController
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    testImplementation("org.springframework.boot:spring-boot-starter-test") {
+        exclude(mapOf("group" to "org.junit.vintage", "module" to "junit-vintage-engine"))
+    }
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 testing {

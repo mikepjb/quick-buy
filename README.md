@@ -6,6 +6,15 @@ keep them all happy!
 This is also a project dedicated to learning modern Java. (No I have asked and it isn't an
 oxymoron).
 
+## Getting Started
+
+`make build && make run`
+
+## Tools used
+
+- Spring boot & Java 21
+- HTMX, plain CSS & JS.
+
 ## Notes on how this codebase was setup
 
 - Start the parent image with `make parent` and run `cd /app && gradle init` running through the
