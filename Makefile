@@ -14,3 +14,6 @@ dev:
 
 jar: # check on the final output jar
 	docker run --detach-keys='ctrl-t,t' --mount type=bind,source="${PWD}",target=/app -it --rm quick-buy/build /bin/sh
+
+run:
+	docker run --rm quick-buy/pos
