@@ -12,18 +12,22 @@ oxymoron).
 
 ## Learning Objectives
 
-- Gradle
-- RestTemplate
-- Annotations
-    - Cache
-    - Bean (manually creating a bean)
-    - Transaction
-    - Service
-    - Component
-- Rest API Validation (like NotNull)
-- Error Handling
-- Fat Jar
-- Docker Image
+- [X] Gradle (setup the project, learnt basics of calling/discovering tasks)
+- [-] RestTemplate (use template to make call, hydrate with exchange => string.class & objectmapper)
+- [ ] Annotations
+    - [ ] Cache
+    - [ ] Bean (manually creating a bean)
+    - [ ] Transaction
+    - [-] Service (created as part of RestTemplate learning `ApiService`.)
+    - [ ] Component
+- [ ] Rest API Validation (like NotNull)
+- [ ] Error Handling
+- [ ] Fat Jar
+- [ ] Docker Image
+
+### Side knowledge
+
+- DTO => Data Transfer Objects or code for exchanging data over the network.
 
 ## Tools used
 
