@@ -10,6 +10,21 @@ oxymoron).
 
 `make build && make run`
 
+## Learning Objectives
+
+- Gradle
+- RestTemplate
+- Annotations
+    - Cache
+    - Bean (manually creating a bean)
+    - Transaction
+    - Service
+    - Component
+- Rest API Validation (like NotNull)
+- Error Handling
+- Fat Jar
+- Docker Image
+
 ## Tools used
 
 - Spring boot & Java 21
