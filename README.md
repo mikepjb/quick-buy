@@ -13,12 +13,12 @@ oxymoron).
 ## Learning Objectives
 
 - [X] Gradle (setup the project, learnt basics of calling/discovering tasks)
-- [-] RestTemplate (use template to make call, hydrate with exchange => string.class & objectmapper)
+- [.] RestTemplate (use template to make call, hydrate with exchange => string.class & objectmapper)
 - [ ] Annotations
     - [ ] Cache
     - [ ] Bean (manually creating a bean)
     - [ ] Transaction
-    - [-] Service (created as part of RestTemplate learning `ApiService`.)
+    - [.] Service (created as part of RestTemplate learning `ApiService`.)
     - [ ] Component
 - [ ] Rest API Validation (like NotNull)
 - [ ] Error Handling
