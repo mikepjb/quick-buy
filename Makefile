@@ -9,11 +9,14 @@ build:
 parent:
 	docker run --detach-keys='ctrl-t,t' --mount type=bind,source="${PWD}",target=/app -it --rm gradle:8.11.0-jdk21-corretto /bin/sh
 
-dev:
+fallback-dev: # when things will not compile but you need Java 21 etc
 	docker run --detach-keys='ctrl-t,t' --mount type=bind,source="${PWD}",target=/app -it --rm quick-buy/dev /bin/sh
 
-jar: # check on the final output jar
+dev: # check on the final output jar
 	docker run --detach-keys='ctrl-t,t' --mount type=bind,source="${PWD}",target=/app -it --rm quick-buy/build /bin/sh
+
+test:
+	docker run --detach-keys='ctrl-t,t' --mount type=bind,source="${PWD}",target=/app -it --rm quick-buy/build ./gradlew test
 
 run:
 	docker run --rm --net=host quick-buy/pos
