@@ -34,7 +34,8 @@ public class App {
         return new String(resource.getInputStream().readAllBytes());
     }
 
-    @GetMapping("/hello")
+    // TODO get list of items that can be bought, has a happy/sad path
+    @GetMapping("/items")
     public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
       return String.format("Hello %s!", name);
     }
@@ -42,9 +43,5 @@ public class App {
     @GetMapping("/error")
     public String error(String name) {
       return String.format("Page not found under %s", name);
-    }
-
-    public String testFunction() {
-        return "yes, this is a good function.";
     }
 }
