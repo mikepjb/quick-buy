@@ -13,17 +13,19 @@ oxymoron).
 ## Learning Objectives
 
 - [X] Gradle (setup the project, learnt basics of calling/discovering tasks)
-- [ ] RestTemplate (use template to make call, hydrate with exchange => string.class & objectmapper)
-- [ ] Annotations
+- [X] RestTemplate (use template to make call, hydrate with exchange => string.class & objectmapper)
+- [X] Annotations
     - [ ] Cache
     - [ ] Bean (manually creating a bean)
+        - Objects managed by Spring, you "declare" them instead of "asking" for them (via Springs inversion
+          of control mechanism)
     - [ ] Transaction
-    - [ ] Service (created as part of RestTemplate learning `ApiService`.)
+    - [X] Service (created as part of RestTemplate learning `ApiService`.)
     - [ ] Component
 - [ ] Rest API Validation (like NotNull)
-- [ ] Error Handling
-- [ ] Fat Jar
-- [ ] Docker Image
+- [X] Error Handling
+- [X] Fat Jar
+- [X] Docker Image
 
 ### Side knowledge
 

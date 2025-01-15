@@ -20,13 +20,14 @@ ERROR_RESPONSE = {
 class ProductServer(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/product':
+            is_failure = random.random() >= 0.3
             # Set response headers
-            self.send_response(200 if random.random() >= 0.3 else 404)
+            self.send_response(200 if not is_failure else 404)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
             
             # 30% chance of error response
-            if random.random() < 0.3:
+            if is_failure:
                 response = ERROR_RESPONSE
             else:
                 response = random.choice(PRODUCTS)

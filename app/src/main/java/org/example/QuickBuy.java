@@ -15,6 +15,7 @@ import org.springframework.core.io.ResourceLoader;
 // import org.springframework.ui.Model;
 // import org.springframework.web.bind.annotation.RequestMapping;
 
+// springboot annotation scans and pulls in all rest controllers automatically
 @SpringBootApplication
 @RestController
 public class QuickBuy {
