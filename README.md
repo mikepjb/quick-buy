@@ -19,7 +19,7 @@ oxymoron).
     - [ ] Bean (manually creating a bean)
         - Objects managed by Spring, you "declare" them instead of "asking" for them (via Springs inversion
           of control mechanism)
-    - [ ] Transaction
+    - [ ] Transaction (management with sqlite bean)
     - [X] Service (created as part of RestTemplate learning `ApiService`.)
     - [ ] Component
 - [ ] Rest API Validation (like NotNull)
@@ -30,6 +30,8 @@ oxymoron).
 ### Side knowledge
 
 - DTO => Data Transfer Objects or code for exchanging data over the network.
+- You would normally create a bean inside a configuration class.
+- A bean is a singleton class managed by Spring Context. (Spring Context is a managed runtime & is part Boot)
 
 ## Tools used
 
