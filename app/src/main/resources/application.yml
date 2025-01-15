@@ -1,0 +1,15 @@
+server:
+  port: 1337
+
+spring:
+  application:
+    name: quick-buy
+  datasource:
+    url: jdbc:psql://localhost:6086/quick-buy
+    username: quick
+    password: password
+
+logging:
+  level:
+    root: INFO
+    org.springframework: WARN

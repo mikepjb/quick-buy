@@ -1,7 +1,10 @@
 package org.example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.core.io.Resource;
@@ -14,15 +17,15 @@ import org.springframework.core.io.ResourceLoader;
 
 @SpringBootApplication
 @RestController
-public class App {
+public class QuickBuy {
     private final ResourceLoader resourceLoader;
 
-    public App(ResourceLoader resourceLoader) {
+    public QuickBuy(ResourceLoader resourceLoader) {
         this.resourceLoader = resourceLoader; // TODO where does it come from?
     }
 
     public static void main(String[] args) {
-      SpringApplication.run(App.class, args);
+      SpringApplication.run(QuickBuy.class, args);
     }
 
     @GetMapping("/")
@@ -43,5 +46,11 @@ public class App {
     @GetMapping("/error")
     public String error(String name) {
       return String.format("Page not found under %s", name);
+    }
+
+    @GetMapping(value = "/api/users/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<User> getUser(@PathVariable Long id) {
+        User user = new User(id, "John Doe");
+        return ResponseEntity.ok(user);
     }
 }
